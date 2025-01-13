@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pages {
+            display: inline-block;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            border: 1px solid black;
+        }
+
+        .active {
+            background-color: rgba(94, 155, 4, 0.938);
+            color: white;
+        }
+
+        a:hover:not(.active) {
+            background-color: #d0cece;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="pages">
+        <a href="#">&laquo;</a>
+        <a class="active" href="##">1</a>
+        <a href="##">2</a>
+        <a href="##">3</a>
+        <a href="##">4</a>
+        <a href="##">..</a>
+        <a href="##">..</a>
+        <a href="##">7</a>
+        <a href="##">8</a>
+        <a href="##">9</a>
+        <a href="###">&raquo;</a>
+    </div>
+</body>
+</html>

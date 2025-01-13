@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        .grid-container{
+            background-color: #2196fe;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(3,200px);
+            /* grid-auto-rows: 100px; */
+            grid-auto-rows: min-content;
+            /* grid-auto-flow: column; */
+            grid-gap: 20px;
+            height: 100vh;
+            justify-content: center; /* Horizontal alignment */
+            align-content: end; /* vertical alignment of grid */
+        }
+
+        .grid-item{
+            background-color: rgba(255,255,255,0.8);
+            padding: 20px;
+            border: 2px solid rgba(0,0,0,0.8);
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .item-3 {
+            grid-column: span 3;
+            justify-self: center;
+        }
+
+        .item-4 {
+            grid-row: span 2;
+        }
+
+        .item-5  {
+            grid-column: span 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <!-- <div class="grid-item">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </div>
+        <div class="grid-item">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div> -->
+        <div class="grid-item item-3">3</div>
+        <div class="grid-item item-4">4</div>
+        <div class="grid-item item-5">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+        <div class="grid-item">10</div>
+        <div class="grid-item">11</div>
+    </div>
+</body>
+</html>

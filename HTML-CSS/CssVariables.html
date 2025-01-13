@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --mycolor: red;
+            --mywidth: 200px;
+        }
+        .box1 {
+            width: var(--mywidth);
+            height: 200px;
+            background-color: var(--mycolor);
+            padding: 5px;
+            margin: 20px;
+        }
+        .box2 {
+            width: var(--mywidth);
+            height: 200px;
+            background-color: var(--mycolor);
+            padding: 5px;
+            margin: 20px;
+        }
+        .box3 {
+            width: var(--mywidth);
+            height: 200px;
+            background-color: var(--mycolor);
+            padding: 5px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">Box 1</div>
+    <div class="box2">Box 2</div>
+    <div class="box3">Box 3</div>
+</body>
+</html>

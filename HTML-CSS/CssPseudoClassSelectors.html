@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Selectors</title>
+    <style>
+        button:hover{
+            background-color: blue;
+        }
+
+        button:active{
+            background-color: red;
+        }
+
+        a:visited{
+            color: green;
+        }
+
+        input:focus{
+            background-color: green;
+            color: red;
+        }
+
+        /* style 2rd child if paragraph */
+        /* p:nth-child(2){
+            background-color: blueviolet;
+        } */
+
+        /* style paragraph child of even position */
+        /* p:nth-child(2n){
+            background-color: blueviolet;
+        } */
+
+        p:first-child{
+            background-color: aqua;
+        }
+
+        p:last-child{
+            background-color: bisque;
+        }
+
+        h6:first-of-type{
+            background-color: brown;
+        }
+
+        section{
+            display: none;
+            background-color: yellow;
+        }
+
+        div:hover section{
+            display: block;
+        }
+        
+    </style>
+</head>
+<body>
+    <button>Click me</button>
+
+    <a href="####">visit me</a>
+
+    <input type="text"/>
+
+    <div>
+        <p>First</p> <!-- child 1 -->
+        <p>Second</p> <!-- child 2 -->
+        <p>Third</p> <!-- child 3-->
+        <p>Fourth</p> <!-- child 4 -->
+        <div> <!-- child 5 -->
+            <h5>Header 5</h5> <!-- child 1 -->
+            <p>nested 1</p> <!-- child 2 -->
+            <p>nested 2</p> <!-- child 3 -->
+        </div>
+        <p>6</p> <!-- child 6 -->
+        <h6>Header 6</h6>
+        <h6>Header 6.2</h6>
+
+        <div>Hover over this div element to show the section element
+            <section>Tada! Here I am section!</section>
+          </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Selector</title>
+    <style>
+        a[href^="http"]{
+            background-color: blueviolet;
+        }
+
+        input[type="email"]{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <a href="###">Inline 1</a>
+        <a href="https://www.google.com/maps">Google</a>
+        <a href="###">Inline 2</a>
+        <a href="https://www.Youtube.com/">Youtube</a>
+        <a href="###">Inline 3</a>
+    </div>
+    <form>
+        <input type="text" placeholder="name"/>
+        <input type="email" placeholder="email"/>
+        <input type="number" placeholder="Phone"/>
+    </form>
+</body>
+</html>

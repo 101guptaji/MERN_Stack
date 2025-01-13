@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Elements</title>
+    <style>
+        #msg::before {
+            content: 'A';
+            display: inline-block;
+            background-color: green;
+            color: white;
+            width: 15px;
+            height: 15px;
+            border: none;
+            border-radius: 50px;
+        }
+
+        #msg::after {
+            content: 'new message';
+            background-color: gray;
+            color: white;
+            opacity: 0.5;
+            padding: 2px;
+            margin-left: 2px;
+            border: none;
+            border-radius: 50px;
+        }
+
+        /* highlight first line */
+        #des::first-line{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <p id="msg">Himanshu Gupta</p>
+    <p id="des">You are receiving this email because you are subscribed to calendar notifications. To stop receiving these emails, go to Calendar settings, select this calendar, and change "Other notifications".
+        Forwarding this invitation could allow any recipient to send a response to the organizer, be added to the guest list, invite others regardless of their own invitation status, or modify your RSVP. Learn more
+    </p>
+</body>
+</html>

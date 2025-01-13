@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DropDown</title>
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            background-color: greenyellow;
+            color: black;
+            border: none;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        .dropdown-content {
+            display: none;
+            padding: 20px;
+            position: absolute;
+            z-index: 1;
+            box-shadow: 0px 8px 16px 0px gray;
+            left: 30px;
+        }
+
+        .dropdown:hover .dropdown-content{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="dropdown">
+        <button class="dropbtn">DropDown</button>
+        <div class="dropdown-content">
+            <a href="#option1">Option 1</a>
+            <a href="#option1">Option 2</a>
+            <a href="#option1">Option 3</a>
+            <a href="#option1">Option 4</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <label>Country</label>
+        <select>
+            <option>India</option>
+            <option>Pakistan</option>
+            <option>Italy</option>
+            <option>Sri Lanka</option>
+            <option>USA</option>
+        </select>
+    </div>
+</body>
+</html>

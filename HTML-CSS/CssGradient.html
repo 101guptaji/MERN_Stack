@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gradient1 {
+            width: 400px;
+            height: 200px;
+            background-image: linear-gradient(to bottom right, red, green);
+            /* background-image: linear-gradient(violet, indigo, blue, green, yellow, orange, red); */
+        }
+
+        .gradient2 {
+            width: 400px;
+            height: 200px;
+            /* background-image: repeating-linear-gradient(red, yellow 10%, green 20%); */
+            background-image: repeating-linear-gradient(45deg, red 0px, red 10px, yellow 10px, yellow 20px);
+        }
+
+        .gradient3 {
+            width: 400px;
+            height: 400px;
+            margin: 10px;
+            background-image: radial-gradient(red 10%, yellow 20%, green 50%, blue 70%);
+            border-radius: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="gradient1"></div>
+    <p>A repeating gradient on 45deg axe with solid stripes:</p>
+    <div class="gradient2"></div>
+    <p>A circular gradient:</p>
+    <div class="gradient3"></div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .flex-container{
+            display: flex;
+            flex-direction: row;
+        }
+
+        #navbar {
+            background-color: #D7E8D4;
+            flex: 1;
+            padding: 1em;
+            min-height: 100vh;
+        }
+
+        #content-bar {
+            display: flex;
+            flex-direction: column;
+            flex: 5;
+        }
+
+        .yellowgreen {
+            background: yellowgreen;
+            min-height: 20vh;
+            padding: 1em;
+        }
+
+        #content {
+            display: flex;
+            flex-direction: row;
+            min-height: 60vh;
+
+            & article {
+                flex: 4;
+                padding: 1em;
+            }
+
+            & aside {
+                background-color: beige;
+                flex: 1;
+                padding: 1em;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div id="navbar">Nav</div>
+        <div id="content-bar">
+            <div class="yellowgreen">Header</div>
+            <div id="content">
+                <article>Article</article>
+                <aside>Aside</aside>
+            </div>
+            <div class="yellowgreen">Footer</div>
+        </div>
+    </div>
+</body>
+</html>

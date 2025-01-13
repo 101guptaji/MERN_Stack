@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>REG Form</title>
+</head>
+<body>
+    <form>
+        Name: <input type = "text" name="myName" placeholder="Enter full name"/> <br>
+        Company: <input type="url" value="https://google.com" readonly/> <br>
+        EMail: <input type = "email" value="@gmail.com"/><br>
+        Password: <input type = "password" required = true/><br>
+        Mobile: <input type = "number" min = 5 max = 10 /><br>
+        Date: <input type = "date" /><br>
+        File: <input type = "file"/><br>
+        Hidden: <input type = "hidden"/><br>
+        <label>Male</label><input type = "radio"/> 
+        <label>Female</label><input type = "radio"/> <br>
+        <input type = "checkbox"/><label>are you minor?</label><br>
+
+        <select>
+            <option>Mango</option>
+            <option>Orange</option>
+            <option>Apple</option>
+        </select> <br>
+        <hr>
+        <input type = "submit"/><br>
+    </form>
+
+    <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+        <input type="range" id="a" value="50">
+        +<input type="number" id="b" value="25">
+        =<output name="x" for="a b"></output>
+    </form>
+</body>
+</html>

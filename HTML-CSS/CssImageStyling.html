@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .polarise {
+            width: 500px;
+            box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+            & img{
+                width: 500px;
+                display: block;
+                filter: grayscale(5);
+                -webkit-box-reflect: right;
+            }
+
+            & p{
+                text-align: center;
+                padding: 5px;
+            }
+        }
+
+        .polarise1 {
+
+            & img{
+                width: 500px;
+                transform: scale(-1,1);
+                border-radius: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="polarise">
+        <img src="./images/dog1.jpg" alt="Dog image"/>
+        <p>A smiling dog</p>
+    </div>
+
+    <div class="polarise1">
+        <img src="./images/dog1.jpg" alt="Dog image"/>
+        <p>A rotated dog</p>
+    </div>
+</body>
+</html>

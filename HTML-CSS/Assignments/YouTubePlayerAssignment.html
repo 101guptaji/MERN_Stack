@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube</title>
+    <style>
+        #player {
+            display: inline-block;
+            width: 75%;
+            vertical-align: top;
+
+            & video{
+                width: 100%;
+            }
+        }
+
+        #videoList {
+            display: inline-block;
+            width: 20%;
+            vertical-align: top;
+
+            & li{
+                list-style: none;
+            }
+
+            & img {
+                width: 55%;
+                height: 5em;
+            }
+
+            & p {
+                width: 40%;
+            }
+
+            & img, p {
+                display: inline-block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="player">
+            <video id="video" controls>
+                <source src="https://sample-videos.com/video123/mp4/480/big_buck_bunny_480p_20mb.mp4" type="video/mp4"/>
+            </video>
+            <h2>Animated cartoon for Children | 2023</h2>
+        </div>
+        <div id="videoList">
+            <ul>
+                <li>
+                    <img src="https://i.ytimg.com/an_webp/9tL1m9MXaXQ/mqdefault_6s.webp?du=3000&sqp=CPzC354G&rs=AOn4CLC4cD5zYBuj81-FjZaaDNEc9mYqBg "
+                        alt="thumbnail" />
+                    <p><b>Video 1</b><br><br>Short description of Video 1</p>
+                </li>
+                <li>
+                    <img src="https://i.ytimg.com/an_webp/ZVO8Wt_PCgE/mqdefault_6s.webp?du=3000&sqp=COLS354G&rs=AOn4CLC6GOtKf56PIytnUqstq1Cj9-2oLQ "
+                        alt="thumbnail" />
+                    <p><b>Video 2</b><br><br>Short description of Video 2</p>
+                </li>
+                <li>
+                    <img src="https://i.ytimg.com/an_webp/JTtVFPALu6o/mqdefault_6s.webp?du=3000&sqp=COTF354G&rs=AOn4CLBkhK7Xh3RP_OPxyym08QjpKki-Vg "
+                        alt="thumbnail" />
+                    <p><b>Video 3</b><br><br>Short description of Video 3</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

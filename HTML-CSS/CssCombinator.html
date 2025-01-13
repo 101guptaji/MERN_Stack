@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Descendent selector */
+        div h1{
+            color: red;
+        }
+
+        /* Child selector */
+        div > h2{
+            color: green;
+        }
+
+        /* Adjacent Sibling Selector */
+        /* h1 + h2{
+            color: blue;
+        } */
+
+        /* General Sibling Selector */
+        h1 ~ h2{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>color red1</h1>
+        <h1>color red2</h1>
+        <section>
+            <h1>header1 in section div</h1>
+            <h2>header2 in section div</h2>
+        </section>
+    </div>
+
+    <div>
+        <h2>color green1</h2>
+        <h2>color green2</h2>
+        <section>
+            <h2>header2 in section div</h2>
+            <h3>header3 in section div</h3>
+        </section>
+    </div>
+
+    <h1>Header 1</h1>
+    <h2>header 2</h2>
+    <h2>header 2</h2>
+    <h2>header 2</h2>
+    <div>
+        <p>paragraph</p>
+    </div>
+</body>
+</html>

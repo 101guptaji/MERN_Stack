@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image sprite</title>
+    <style>
+        #home {
+            width: 46px;
+            height: 44px;  /*  Defines the portion of the image we want to use */
+            background: url(./images/img_navsprites.gif) 0 0;
+            /* Defines the background image and its position (left 0px, top 0px) */
+        }
+
+        #left-arrow {
+            width: 43px;
+            height: 44px;
+            background-image: url(./images/img_navsprites.gif);
+            background-position: 87px 0; 
+        }
+
+        #right-arrow {
+            width: 43px;
+            height: 44px;
+            background: url(./images/img_navsprites.gif) -91px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Only defines a small transparent image because the src attribute cannot be empty -->
+    <img id="home" src="./images/trans.gif" width="1" height="1">
+    <img id="left-arrow" width="1" height="1">
+    <img id="right-arrow">
+</body>
+</html>

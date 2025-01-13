@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nesting and Container Queries</title>
+    <style>
+        .mycontainer{
+            container-type: inline-size;
+            background-color: antiquewhite;
+            padding: 20px;
+        }
+
+        .card{
+            background-color: aquamarine;
+            border-radius: 8px;
+            padding: 16px;
+
+            & h2{
+                color: blue;
+            }
+
+            & p{
+                color: brown;
+            }
+
+            @container(min-width: 600px){
+                & {
+                    padding-left: 100px;
+                }
+                
+                & h2{
+                    font-size: smaller;
+                }
+
+                & p{
+                    font-size: larger;
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="mycontainer">
+        <div class="card">
+            <h2>Header 2</h2>
+            <p>it is a paragraph.</p>
+        </div>
+        <div>
+            <h2>Header 2 in div 2</h2>
+        </div>
+    </div>
+</body>
+</html>
