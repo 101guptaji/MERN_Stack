@@ -62,6 +62,31 @@
     }
 }
 
+.mobile-nav-toggle{
+    display: none;
+}
+
+@media screen and (max-width: 768px){
+    .nav ul{
+        display: none;
+    }
+
+    .mobile-nav-toggle{
+        display: block;
+        color: #FF9933;
+        background-color: white;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .mobile-nav-toggle:active .nav ul{
+        visibility: visible;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 /* Home section styles */
 .home {
     overflow: hidden;
@@ -76,7 +101,7 @@
 
 .hero-text {
     width: 40%;
-    padding-top: 100px;
+    padding-top: 10px;
     padding-left: 20px;
     display: flex;
     flex-direction: column;

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./images/Logo.png" rel="icon">
+    <title>HimanshuGupta-a Software Developer</title>
+    <link href="./output.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/105bb067b8.js" crossorigin="anonymous"></script>
+</head>
+<body class="font-roboto">
+    <header class="bg-slate-900 text-white fixed w-full top-0 left-0 z-10">
+
+        <div class="max-w-screen-xl mx-auto px-4 py-2 flex justify-between items-center">
+    
+            <a class="text-xl font-bold items-center flex-row hover:text-orange-400" href="##">
+                <img class="w-10 inline-flex mt-4" src="./images/Logo.png">
+                <span class="inline-flex text-left text-sm hover:text-lg space-y-0">Himanshu<br>Gupta</span>
+            </a>
+    
+            <nav class="hidden md:flex space-x-8 px-4">
+                <a href="#home" class="hover:text-orange-400">Home</a>
+                <a href="#about" class="hover:text-orange-400">About Me</a>
+                <a href="#projects" class="hover:text-orange-400">Projects</a>
+                <a href="#contact" class="hover:text-orange-400">Contact</a>
+            </nav>
+    
+            <div class="md:hidden flex items-center">
+                <button type="button" class=" text-white"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" 
+        class="relative flex flex-col justify-center items-center h-screen bg-[url(./images/hero-HG.png)] bg-right-top bg-cover bg-no-repeat bg-white max-xl:bg-none dark:bg-gray-700 dark:text-white">
+        <div class="container max-xl:text-center">
+          <h1 class="text-orange-400 text-4xl md:text-6xl font-bold mb-4 hover:text-orange-600">Himanshu Gupta</h1>
+          <p class="text-lg md:text-xl mb-6 hover:text-cyan-600 hover:font-semibold">
+            Software Engineer, Web Developer & Programmer</p>
+            <div class="xl:w-1/2 text-center">
+                <a href="#projects" class="bg-blue-300 px-4 py-2 hover:bg-blue-500 text-white hover:font-bold rounded-lg">View My Work</a>
+            </div>  
+        </div>
+    </section>
+    <!-- End Hero -->
+
+    <!-- About Me Section -->
+    <section id="about" class="py-16 px-4 bg-gray-100 text-center dark:bg-gray-800 dark:text-white">
+        <div class="max-w-4xl mx-auto my-20">
+            <h2 class="text-4xl font-semibold mb-4 text-orange-400 hover:text-orange-600 hover:underline transition-all ease-in-out delay-100 uppercase">About Me</h2>
+            <div class="flex justify-center mb-8">
+                <img src="./images/man.png" alt="Profile Picture" 
+                    class="rounded-full size-20 shadow-lg">
+            </div>
+            <p class="text-lg mb-4">
+                Detail-oriented and results-driven Full Stack Developer with approx 2 years of experience in designing, developing,
+                and maintaining web applications. Proficient in front-end and back-end technologies, including database and software
+                design.     
+            </p>
+            <div class="flex flex-row justify-around">
+                <div>
+                    <h3 class="font-semibold text-xl underline text-start text-green-600 dark:text-green-400">Key Skills</h3>
+                    <ul class="list-disc list-inside text-start">
+                        <li>HTML & CSS</li>
+                        <li>JavaScript</li>
+                        <li>Java</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-xl underline text-start text-green-600 dark:text-green-400">Hobbies</h3>
+                    <ul class="list-disc list-inside text-start">
+                        <li>Coding</li>
+                        <li>Gaming</li>
+                        <li>Sleeping</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About section end -->
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 px-4 dark:bg-blue-950">
+        <div class="max-w-screen-xl mx-auto text-center ">
+            <h2 class="text-3xl font-semibold mb-12 text-orange-400 hover:text-orange-600 hover:underline transition-all ease-in-out delay-100 uppercase">My Projects</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+                <!-- Project 1 -->
+                <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-black hover:bg-gray-300 dark:hover:bg-gray-800 dark:bg-gray-700 dark:text-white">
+                    <img src="./images/fileSharingProject.png" alt="Project 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl dark:text-cream font-semibold mb-2">File Sharing App</h3>
+                        <p class="text-gray-600 mb-4 dark:text-gray-200">Created an innovative and simple platform where users can upload a file and share the link of the file with anyone. 
+                            <br>Tech stacks: HTML, CSS, JavaScript and Java
+                        </p>
+                        <a href="https://github.com/101guptaji/filesharingmanager" class="text-blue-600 hover:text-blue-800 dark:text-blue-300 hover:dark:text-sky-500">View Project</a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-black hover:bg-gray-300 dark:hover:bg-gray-800 dark:bg-gray-700 dark:text-white">
+                    <img src="./images/empProject.png" alt="Project 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 dark:text-cream">Employee Management System</h3>
+                        <p class="text-gray-600 mb-4 dark:text-gray-200">
+                            It is a dynamic webpage for employee management that lists all employees data at one place.
+                            <br>Tech stacks: HTML, CSS, JavaScript, React, SQL, Spring-boot and Java
+                        </p>
+                        <a href="https://github.com/101guptaji/Employee-Management-System" class="text-blue-600 hover:text-blue-800 dark:text-blue-300 hover:dark:text-sky-500">View Project</a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-black hover:bg-gray-300 dark:hover:bg-gray-800 dark:bg-gray-700 dark:text-white">
+                    <img src="./images/image-filter.png" alt="Project 3" class="w-full h-48 object-contain">
+                    <div class="p-6">
+                        <h3 class="text-xl dark:text-cream font-semibold mb-2">PhotoShop</h3>
+                        <p class="text-gray-600 mb-4 dark:text-gray-200">
+                            An interactive web page where a user can upload an image and apply filters to it.
+                            <br> Tech stacks: HTML, CSS and JavaScript
+                        </p>
+                        <a href="https://github.com/101guptaji/Image-Filters-MiniProject" class="text-blue-600 hover:text-blue-800 dark:text-blue-300 hover:dark:text-sky-500">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Project section end -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-4 bg-gray-300 dark:bg-gray-800 dark:text-white">
+        <div class="max-w-screen-md mx-auto text-center">
+            <h2 class="text-3xl font-semibold mb-8 text-orange-400 hover:text-orange-600 hover:underline transition-all ease-in-out delay-100 uppercase">Contact Me</h2>
+            <form class="space-y-6">
+                <input type="text" 
+                    placeholder="Your Name" 
+                    class="w-full p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white">
+                <input type="email" 
+                    placeholder="Your Email" 
+                    class="w-full p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white">
+                <textarea placeholder="Your Message" 
+                    class="w-full p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"></textarea>
+                <button type="submit" 
+                    class="w-full py-3 bg-blue-500 rounded-lg text-white hover:bg-blue-700">Send Message</button>
+            </form>
+
+        </div>
+    </section>
+    <!-- Contact section end -->
+
+    <footer class="bg-slate-900 text-white py-4 text-center">
+        <p>Happy to See you here, You can find me on below Platforms.</p>
+        <div class="flex space-x-5 justify-center py-5">
+            <a href="https://github.com/101guptaji" 
+                class="text-3xl hover:text-orange-400 hover:text-4xl">
+                    <i class="fa-brands fa-github">
+                    </i>
+            </a>
+		    <a href="https://www.linkedin.com/in/himanshu-guptaji07/" 
+                class="text-3xl hover:text-orange-400 hover:text-4xl">
+                <i class="fa-brands fa-linkedin">
+                </i>
+            </a>
+            <a href="https://www.hackerrank.com/profile/101guptaji" 
+                class="text-3xl hover:text-orange-400 hover:text-4xl">
+                <i class="fab fa-hackerrank bx-md"></i>
+            </a>
+        </div>
+        <p>&copy; 2025 HimanshuGupta | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
