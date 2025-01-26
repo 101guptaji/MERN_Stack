@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Shopping List</title>
+    <style>
+        div{
+            margin: 10px;
+        }
+
+        button{
+            margin: 10px 100px;
+        }
+
+        table{
+            margin: 10px;
+            width: 400px;
+
+            & tr {
+                text-align: center;
+                
+                & th {
+                    background-color: #0f5f6f;
+                    color: rgb(255,200,200);
+                }
+            }
+        }
+
+        tr,th {
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+
+        tr:last-child{
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Grocery List</h1>
+    <div>
+        <label>Item Name: </label>
+        <input placeholder="item name" id="item-name-input">
+    </div>
+    <div>
+        <label>Item Price: </label>
+        <input placeholder="item price" type="number" id="item-price-input">
+    </div>
+    <button onclick="submitItem()">Add</button>
+    
+    <table>
+        <tr>
+            <th>Sr. No.</th>
+            <th>Title</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td colspan="2">Grand Total</td>
+            <td data-ns-test="grandTotal">0</td>
+        </tr>
+    </table>
+
+    <script src="App.js"></script>
+</body>
+</html>

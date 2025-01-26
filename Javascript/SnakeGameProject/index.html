@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="gameContainer"></div>
+
+    <!-- #scoreContainer contains the scores -->
+    <div id="scoreContainer">
+        <div class="scoreBoard">Your Score: <span id="pointsEarned">0</span>
+        </div>
+    </div>
+
+    <!-- #onScreenControllers contains the navigation buttons for mobile screens -->
+    <div id="onScreenControllers"> 
+        <button id="leftButton">◀️</button> 
+        <div>
+            <button id="upButton">🔼</button> 
+            <button id="downButton">🔽</button>
+        </div>
+        <button id="rightButton">▶️</button>
+    </div>
+    
+
+    <script src="./app.js"></script>
+</body>
+</html>
