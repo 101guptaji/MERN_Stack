@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./images/furnaceLogo.png" rel="icon">
-    <title>Furance Industry</title>
+    <title>About | Furance</title>
     <link rel="stylesheet" href="index.css">
     <script src="https://kit.fontawesome.com/105bb067b8.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <header class="header">
         <a class="logo" href="index.html">
-            <img src="./images/furnaceLogo.png" alt="ICM Logo">
+            <img src="./images/furnaceLogo.png" alt="Company Logo">
+            <h1>IFM</h1>
         </a>
         <nav class="nav">
             <ul>
-                <li class="dropdown"><a href="./services.html" class="nav-link"><span>SERVICES</span><i class="fa-solid fa-chevron-down toggle-dropdown"></i></a>
+                <li><a href="./index.html" class="nav-link">Home</a></li>
+                <li class="dropdown"><a href="./services.html" class="nav-link"><span>SERVICES</span><i
+                            class="fa-solid fa-chevron-down toggle-dropdown"></i></a>
                     <ul>
                         <li><a href="./services.html" class="nav-link">Repairing</a></li>
                         <li><a href="./services.html" class="nav-link">Maintenance</a></li>
@@ -24,20 +29,53 @@
                 <!-- <li><a href="#" class="nav-link">ENGINEERING</a></li> -->
                 <li><a href="./clients.html" class="nav-link">CLIENTS</a></li>
                 <li><a href="./industries.html" class="nav-link">INDUSTRIES</a></li>
-                <li><a href="./about.html" class="nav-link">ABOUT</a></li>
+                <li><a href="./about.html" class="nav-link active">ABOUT</a></li>
                 <li><a href="./contact.html" class="nav-link">CONTACT</a></li>
                 <!-- <li><a href="tel:877-CHIMNEY" class="phone-link nav-link">877-<span>CHIMNEY</span></a></li> -->
             </ul>
         </nav>
 
+
         <button type="button" class="mobile-nav-toggle"><i class="fa-solid fa-bars"></i></button>
     </header>
 
-    <div class="coming-soon">
-        <h1>Coming Soon</h1>
-    </div>
+    <main id="about-page">
+        <div class="page-container">
+            <section class="section1">
+                <div class="our-story-container">
+                    <h2 class="title-dark">About</h2>
+                    <div class="our-story">
+                        <h4 class="sub-title">Est. 1998</h4>
+                        <h3>Our Story</h3>
+                        <p>IFM Furnace is among the leading manufacturers and suppliers of Industrial Furnace and Ovens
+                            since our inception in 1998. We serve a wide range of heat treatment industrial needs by
+                            providing world-class capital equipment such as..</p>
+                        <ul>
+                            <li><i class="fa-regular fa-circle-check"></i>
+                                <span>Heat Treatment Furnace</span>
+                            </li>
+                            <li><i class="fa-regular fa-circle-check"></i>
+                                <span>Atmosphere Controlled Furnace</span>
+                            </li>
+                            <li><i class="fa-regular fa-circle-check"></i>
+                                <span>Continuous Furnace and Batch Furnace</span>
+                            </li>
+                            <li><i class="fa-regular fa-circle-check"></i>
+                                <span>Industrial Ovens</span>
+                            </li>
+                        </ul>
+                        <p>We are known for our values and customer-focused business practices. We are able to garner a
+                            reputable range of high-value government and private customers through our commitment and
+                            quality focus.</p>
+                    </div>
+                </div>
+                <div class="story-img" data-aos="zoom-out" data-aos-delay="200"><img src="./images/about.jpg">
+                </div>
+            </section>
+        </div>
+    </main>
 
-    <div class="footer-container">
+    <footer class="footer-container">
         <div class="footer-top">
             <div class="footer-left">
                 <div class="footer-section address">
@@ -52,10 +90,10 @@
             <div class="footer-right">
                 <div class="footer-section links">
                     <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="industries.html">Industries</a></li>
-                    <li><a href="index.html">Privacy Policy</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="industries.html">Industries</a></li>
+                        <li><a href="index.html">Privacy Policy</a></li>
                     </ul>
                 </div>
                 <div class="footer-section links">
@@ -87,10 +125,11 @@
         <div class="footer-bottom">
             <p>Copyright © 2025 Lorem Ipsum</p>
             <a href="##">Website by <span>HimanshuGupta</span></a>
-          </div>
-    </div> 
+        </div>
+    </footer>
 
     <!-- Main JS File -->
-  <script src="./main.js"></script>
+    <script src="./main.js"></script>
 </body>
+
 </html>

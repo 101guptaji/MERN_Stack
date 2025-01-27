@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./images/furnaceLogo.png" rel="icon">
-    <title>Furance Industry</title>
+    <title>Contact | Furance</title>
     <link rel="stylesheet" href="index.css">
     <script src="https://kit.fontawesome.com/105bb067b8.js" crossorigin="anonymous"></script>
 </head>
@@ -13,10 +13,12 @@
 <body>
     <header class="header">
         <a class="logo" href="index.html">
-            <img src="./images/furnaceLogo.png" alt="ICM Logo">
+            <img src="./images/furnaceLogo.png" alt="Company Logo">
+            <h1>IFM</h1>
         </a>
         <nav class="nav">
             <ul>
+                <li><a href="./index.html" class="nav-link">Home</a></li>
                 <li class="dropdown"><a href="./services.html" class="nav-link"><span>SERVICES</span><i
                             class="fa-solid fa-chevron-down toggle-dropdown"></i></a>
                     <ul>
@@ -28,19 +30,75 @@
                 <li><a href="./clients.html" class="nav-link">CLIENTS</a></li>
                 <li><a href="./industries.html" class="nav-link">INDUSTRIES</a></li>
                 <li><a href="./about.html" class="nav-link">ABOUT</a></li>
-                <li><a href="./contact.html" class="nav-link">CONTACT</a></li>
+                <li><a href="./contact.html" class="nav-link active">CONTACT</a></li>
                 <!-- <li><a href="tel:877-CHIMNEY" class="phone-link nav-link">877-<span>CHIMNEY</span></a></li> -->
             </ul>
         </nav>
 
+
         <button type="button" class="mobile-nav-toggle"><i class="fa-solid fa-bars"></i></button>
     </header>
 
-    <div class="coming-soon">
-        <h1>Coming Soon</h1>
-    </div>
+    <main class="contact">
+        <div class="contact-container">
 
-    <div class="footer-container">
+            <div class="info">
+                <h3 class="title">Contact Us</h3>
+                <p class="description">
+                    You can reach us via below ways or Just submit this form and we will be there.
+                </p>
+
+                <div class="info-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <h4>Location:</h4>
+                        <p>420, lorem ipsum, New York, USA</p>
+                    </div>
+                </div><!-- End Info Item -->
+
+                <div class="info-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <h4>Email:</h4>
+                        <p>lorem@lorem.com</p>
+                    </div>
+                </div><!-- End Info Item -->
+
+                <div class="info-item">
+                    <i class="fa-solid fa-mobile"></i>
+                    <div>
+                        <h4>Call:</h4>
+                        <p>+91 905-###-9975</p>
+                    </div>
+                </div><!-- End Info Item -->
+            </div>
+
+            <form id="myForm" role="form" class="contact-form">
+                <div class="row">
+                    <div class="form-group">
+                        <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
+                            required="">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"
+                            required="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
+                        required="">
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" name="message" id="message" placeholder="Message"
+                        required=""></textarea>
+                </div>
+                <div style="text-align: center;"><button type="submit">Send Message</button></div>
+            </form><!-- End Contact Form -->
+
+        </div>
+    </main>
+
+    <footer class="footer-container">
         <div class="footer-top">
             <div class="footer-left">
                 <div class="footer-section address">
@@ -91,10 +149,10 @@
             <p>Copyright © 2025 Lorem Ipsum</p>
             <a href="##">Website by <span>HimanshuGupta</span></a>
         </div>
-    </div>
+    </footer>
 
     <!-- Main JS File -->
-  <script src="./main.js"></script>
+    <script src="./main.js"></script>
 </body>
 
 </html>
