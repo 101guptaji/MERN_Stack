@@ -1,185 +1,172 @@
-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* GAME BOARD STYLES */
 
 #gameContainer {
 
-    /* Set game container dimensions to 40% of viewport width */
-  
-    width: 40vw;
-  
-    height: 40vw;
-  
-    background-color: #02040c; /* Dark blue background */
-  
+  /* Set game container dimensions to 40% of viewport width */
+
+  width: 40vw;
+  height: 40vw;
+  border-radius: 8px;
+  background-color: wheat;
+  /* Dark blue background */
+
+}
+
+.gameBoardPixel {
+
+  /* Set pixel dimensions to 1% of viewport width */
+
+  width: 1vw;
+
+  height: 1vw;
+
+  border-radius: 8px;
+  /* Rounded corners */
+
+  float: left;
+  /* Display pixels in a grid */
+
+}
+
+/* GAME BOARD STYLES END */
+
+/* SNAKE STYLES */
+
+.snakeBodyPixel {
+
+  background-color: rgb(48, 20, 20);
+  /* Green snake body */
+
+}
+
+/* SNAKE STYLES END */
+
+/* FOOD STYLES */
+
+.food {
+
+  background-color: #1eca0e;
+  /* Blue food */
+
+}
+
+/* FOOD STYLES END */
+
+/* SCORE STYLES */
+
+#scoreContainer {
+  justify-content: center;
+  /* Center score container */
+
+}
+
+.scoreBoard {
+  font-size: 50px;
+  /* Large font size */
+
+  display: inline-block;
+  /* Display score inline */
+
+  padding: 1vw;
+  /* Add padding around score */
+
+}
+
+/* SCORE STYLES END */
+
+/* Hide on-screen controllers on desktop */
+
+#onScreenControllers {
+
+  display: none;
+  /* Hide controllers by default */
+
+}
+
+/* Mobile styles */
+
+@media only screen and (max-width: 768px) {
+
+  /* MOBILE */
+
+  #gameContainer {
+
+    width: 80vw;
+    /* Larger game container on mobile */
+
+    height: 80vw;
+
   }
-  
+
   .gameBoardPixel {
-  
-    /* Set pixel dimensions to 1% of viewport width */
-  
-    width: 1vw;
-  
-    height: 1vw;
-  
-    border-radius: 8px; /* Rounded corners */
-  
-    float: left; /* Display pixels in a grid */
-  
+
+    width: 2vw;
+    /* Larger pixels on mobile */
+
+    height: 2vw;
+
   }
-  
-  /* GAME BOARD STYLES END */
-  
-  /* SNAKE STYLES */
-  
-  .snakeBodyPixel {
-  
-    background-color: #4ce71d; /* Green snake body */
-  
-  }
-  
-  /* SNAKE STYLES END */
-  
-  /* FOOD STYLES */
-  
-  .food {
-  
-    background-color: #0e66ca; /* Blue food */
-  
-  }
-  
-  /* FOOD STYLES END */
-  
-  /* SCORE STYLES */
-  
+
   #scoreContainer {
-  
-    justify-content: space-around; /* Center score container */
-  
+
+    width: 80vw;
+    /* Larger score container on mobile */
+
   }
-  
-  .scoreBoard {
-  
-    font-size: 50px; /* Large font size */
-  
-    display: inline-block; /* Display score inline */
-  
-    padding: 1vw; /* Add padding around score */
-  
-  }
-  
-  /* SCORE STYLES END */
-  
-  /* Hide on-screen controllers on desktop */
-  
+
   #onScreenControllers {
-  
-    display: none; /* Hide controllers by default */
-  
-  }
-  
-  /* Developer details */
-  
-  .developerDetails {
-  
-    margin-top: 2vw; /* Add margin above developer details */
-  
+
+    width: 80vw;
+    /* Show controllers on mobile */
+
+    margin: 5vw auto;
+
     display: flex;
-  
-    flex-direction: column; /* Display details in a column */
-  
-    color: #0c1021; /* Dark gray text */
-  
-    font-family: monospace; /* Monospace font */
-  
+
+    justify-content: space-evenly;
+
+    align-items: center;
+
   }
-  
-  .developerDetails a {
-  
-    color: #0c1021; /* Dark gray link color */
-  
+
+  #onScreenControllers>div {
+
+    display: flex;
+
+    flex-direction: column;
+
   }
-  
-  /* Mobile styles */
-  
-  @media only screen and (max-width: 768px) {
-  
-    /* MOBILE */
-  
-    #gameContainer {
-  
-      width: 80vw; /* Larger game container on mobile */
-  
-      height: 80vw;
-  
-    }
-  
-    .gameBoardPixel {
-  
-      width: 2vw; /* Larger pixels on mobile */
-  
-      height: 2vw;
-  
-    }
-  
-    #scoreContainer {
-  
-      width: 80vw; /* Larger score container on mobile */
-  
-    }
-  
-    #onScreenControllers {
-  
-      width: 80vw; /* Show controllers on mobile */
-  
-      margin: 5vw auto;
-  
-      display: flex;
-  
-      justify-content: space-evenly;
-  
-      align-items: center;
-  
-    }
-  
-    #onScreenControllers > div {
-  
-      display: flex;
-  
-      flex-direction: column;
-  
-    }
-  
-    #onScreenControllers button {
-  
-      background-color: transparent;
-  
-      height: 20vw;
-  
-      width: 20vw;
-  
-      font-size: 10vw;
-  
-      border: none;
-  
-    }
-  
-    #onScreenControllers button:focus {
-  
-      outline: none;
-  
-    }
-  
-    #onScreenControllers button:active {
-  
-      background-color: slategray;
-  
-    }
-  
-  
+
+  #onScreenControllers button {
+
+    background-color: transparent;
+
+    height: 20vw;
+
+    width: 20vw;
+
+    font-size: 10vw;
+
+    border: none;
+
   }
+
+  #onScreenControllers button:focus {
+
+    outline: none;
+
+  }
+
+  #onScreenControllers button:active {
+
+    background-color: slategray;
+
+  }
+}

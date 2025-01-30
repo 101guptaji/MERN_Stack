@@ -5,6 +5,7 @@ const student={
     isPassed: true
 }
 
+
 console.log(student.name); //Hanni
 
 console.log(student); //{name: 'Hanni', class: 7, marks: Array(4), isPassed: true}

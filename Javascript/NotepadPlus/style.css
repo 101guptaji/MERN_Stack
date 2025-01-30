@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 70%;
+    height: auto;
+    margin: 3rem auto;
+    border: 1px solid black;
+}
+
+#header {
+    background-color: greenyellow;
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    align-items: center;
+}
+
+#textarea {
+    padding: 5px;
+    width: 100%;
+    height: 60vh;
+    font-size: 1rem;
+    border-style: none;
+    overflow: scroll;
+}
+
+#textarea:focus {
+    outline-style: none;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        .container{
+            background-color: lightgreen;
+            padding: 1rem 5rem;
+        }
+
+        h1{
+            font-size: 3rem;
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        .row{
+            margin: 1rem 0;
+            font-size: 1.5rem;
+
+            & input{
+                width: 100%;
+                font-size: 1.5rem;
+                padding: 5px;
+            }
+
+            & input:focus{
+                outline: 2px solid blue;
+                border: 2px solid skyblue;
+            }
+        }
+
+        .submit-button{
+            text-align: center;
+        }
+
+        input[type=submit]{
+            font-size: 1.25rem;
+            background-color: rgb(0, 0, 255);
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #errorMessage{
+            color: red;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form id="myForm">
+            <h1>Form Validation</h1>
+            <div class="row">
+                <label class="form-label">Name:</label>
+                <input type="text" placeholder="name" id="name">
+            </div>
+            <div class="row">
+                <label class="form-label">Email:</label>
+                <input type="email" placeholder="email@email.com" id="email">
+            </div>
+            <div class="row">
+                <label class="form-label">Phone No.:</label>
+                <input type="tel" placeholder="Phone No." id="phone" pattern="[0-9]{6,}">
+            </div>
+            <div class="row">
+                <label class="form-label">Password:</label>
+                <input type="password" placeholder="Password" id="password" required>
+            </div>
+            <div id="errorMessage"></div>
+            <div class="submit-button">
+                <input type = "submit" id="submit" value="submit"/>
+            </div>
+        </form>
+    </div>
+
+    <script src="FormValidation.js"></script>
+</body>
+
+</html>

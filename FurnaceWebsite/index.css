@@ -898,6 +898,7 @@ a:hover {
     width: 100%;
     justify-content: baseline;
     align-items: center;
+    /* margin-bottom: 100px; */
     /* overflow: scroll; */
 
     & h1 {
@@ -973,6 +974,7 @@ a:hover {
     justify-content: center;
     align-items: start;
     overflow: hidden;
+    /* margin-bottom: 100px; */
 }
 
 .section1 {
@@ -1067,6 +1069,7 @@ a:hover {
     margin-top: 5rem;
     width: 100%;
     overflow: hidden;
+    /* margin-bottom: 100px; */
 }
 
 .contact-container {

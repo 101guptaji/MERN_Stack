@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <style>
+        .container {
+            position: relative;
+            background-color: lightskyblue;
+            padding: 1rem 5rem;
+            /* width: 100%; */
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+        }
+
+        .row {
+            margin: 0.5rem 0;
+            font-size: 1.25rem;
+
+            & input {
+                width: 100%;
+                font-size: 1rem;
+                padding: 5px;
+            }
+
+            & input:focus {
+                outline: 2px solid blue;
+                border: 2px solid skyblue;
+            }
+        }
+
+        input[type=submit] {
+            font-size: 1rem;
+            background-color: green;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+            margin-bottom: 10px;
+        }
+
+        .content {
+            margin: 0.25rem 0;
+            font-size: 1.25rem;
+
+            & input {
+                width: 100%;
+                font-size: 1rem;
+                padding: 5px;
+                border: none;
+                outline: none;
+            }
+
+            & input:read-only {
+                background-color: rgba(230, 230, 230, 0.433);
+            }
+        }
+
+        .actions .btn {
+            font-size: 1rem;
+            padding: 5px 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+            margin-right: 5px;
+        }
+
+        .edit {
+            background-color: rgba(255, 200, 0, 0.996);
+            color: red;
+        }
+
+        .delete {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form id="taskForm">
+            <h1>TO DO List</h1>
+            <div class="row">
+                <label class="form-label">Add Task:</label>
+                <input type="text" placeholder="Enter task you want to perform.." id="task-input">
+            </div>
+
+            <div class="submit-button">
+                <input type="submit" id="submit" value="Submit" />
+            </div>
+        </form>
+
+        <div class="tasks-container">
+            <h2>Tasks:</h2>
+            <div class="task-list">
+                <!-- <div class="task">
+                    <div class="content">
+                        <input type="text" value="Exercise 15 minutes" id="task1" readonly>
+                    </div>
+                    <div class="actions">
+                        <button class="btn edit">Edit</button>
+                        <button class="btn delete">Delete</button>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <script src="ToDoList.js"></script>
+</body>
+
+</html>

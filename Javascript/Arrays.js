@@ -35,6 +35,9 @@ console.log(mixed.join("-> "));
 const num = new Array(1,2,3,4,5);
 console.log(num.slice(1,3)); //returns a shallow copy of a portion of an array from start index to end index(excluding)
 
+num.splice(1,2,10); //removing 2 elements from index 1, and adding element 10. 
+console.log("Update at index 1: "+num);
+
 const merged = mixed.concat(num);
 for(let x of merged){
     console.log(x);

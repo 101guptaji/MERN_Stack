@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notepad+</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="notepad">
+            <div id="header">
+                <h2>Notepad++</h2>
+                <div>
+                    <!-- feature-flag to turn autosave on/off -->
+                    <label for="feature-flag">Save My Notes</label>
+                    <input type="checkbox" name="save my notes" id="feature-flag">
+                </div>
+            </div>
+
+            <textarea name="textarea" id="textarea" placeholder="Write your notes here"></textarea>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.grid-item {
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+    align-content: center;
+}
+
+.thumbnail {
+    width: 70%;
+    height: 70%;
+}
+
+.grid-item p {
+    text-align: center;
+    margin-top: 50px;
+}
