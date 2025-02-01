@@ -38,11 +38,12 @@ document.querySelectorAll('.nav a').forEach(nav => {
 document.querySelectorAll('.nav .toggle-dropdown').forEach(navmenu => {
     navmenu.addEventListener('click', function (e) {
         e.preventDefault();
-        this.parentNode.classList.toggle('active');
+        this.parentNode.classList.toggle('navactive');
         this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
         e.stopImmediatePropagation();
     });
 });
+
 
 
 /*

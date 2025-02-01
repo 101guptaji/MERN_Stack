@@ -81,60 +81,6 @@ a:hover {
     position: relative;
 }
 
-.nav .dropdown ul {
-    margin: 0;
-    padding: 0.5rem 0;
-    background: var(--nav-mobile-background-color);
-    display: block;
-    position: absolute;
-    visibility: hidden;
-    left: 1.5rem;
-    top: 100%;
-    opacity: 0;
-    transition: all 0.3s;
-    transform-origin: 50% 0;
-    border: 1px solid #eee;
-    z-index: 9;
-    /* box-shadow: 0px 0px 1.75rem rgba(0, 0, 0, 0.1); */
-}
-
-.nav .dropdown:hover>ul {
-    opacity: 1;
-    top: 100%;
-    visibility: visible;
-    margin-top: 1.5rem;
-}
-
-.nav .dropdown ul li {
-    min-width: 10rem;
-    text-align: left;
-    position: relative;
-    display: block;
-    margin: 0;
-    border-bottom: 1px solid #e6e6e6;
-    padding: 1.5rem;
-}
-
-.nav .dropdown ul a {
-    margin: 0;
-    font-size: 1rem;
-    line-height: 1rem;
-    text-transform: capitalize;
-    color: #212121;
-}
-
-.nav .dropdown ul li:last-child {
-    border-bottom: 0;
-}
-
-.nav .dropdown ul li:hover>a,
-.nav .dropdown:hover>a,
-.nav-link:hover,
-.nav .active {
-    color: var(--nav-hover-color);
-}
-
-
 .nav-link {
     text-decoration: none;
     line-height: 1.25rem;
@@ -144,25 +90,71 @@ a:hover {
     font-weight: 600;
     text-transform: uppercase;
     margin: 0 1.5rem;
-    display: block;
+    display: flex;
     cursor: pointer;
 }
 
-/* .phone-link {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-
-    & span{
-        color: #FF9933;
-    }
-} */
+.nav .active {
+    color: var(--nav-hover-color);
+}
 
 .mobile-nav-toggle {
     display: none;
 }
 
-@media screen and (max-width: 768px) {
+
+@media (min-width: 768px) {
+    .nav .dropdown ul {
+        margin: 0;
+        padding: 0.5rem 0;
+        background: var(--nav-mobile-background-color);
+        position: absolute;
+        display: block;
+        left: 1.5rem;
+        top: 100%;
+        opacity: 0;
+        transition: all 0.3s ease-in;
+        /* transform-origin: 50% 0; */
+        border: 1px solid color-mix(in srgb, var(--nav-color), transparent 90%);
+        z-index: 9;
+        /* box-shadow: 0px 0px 1.75rem rgba(0, 0, 0, 0.1); */
+    }
+
+    .nav .dropdown:hover>ul {
+        opacity: 1;
+        top: 100%;
+        margin-top: 1.5rem;
+    }
+
+    .nav .dropdown ul li {
+        min-width: 10rem;
+        text-align: left;
+        position: relative;
+        display: block;
+        margin: 0;
+        border-bottom: 1px solid #e6e6e6;
+        padding: 1.5rem;
+    }
+
+    .nav .dropdown ul a {
+        margin: 0;
+        font-size: 1rem;
+        line-height: 1rem;
+        text-transform: capitalize;
+        color: #212121;
+    }
+
+    .nav .dropdown ul li:last-child {
+        border-bottom: 0;
+    }
+
+    .nav .dropdown ul li:hover>a,
+    .nav .dropdown:hover>a {
+        color: var(--nav-hover-color);
+    }
+}
+
+@media (max-width: 768px) {
     .mobile-nav-toggle {
         display: block;
         color: var(--nav-hover-color);
@@ -213,7 +205,7 @@ a:hover {
         height: 2rem;
         display: flex;
         align-items: center;
-        justify-content: start;
+        justify-content: center;
         border-radius: 50%;
         transition: 0.3s;
     }
@@ -227,11 +219,20 @@ a:hover {
         background-color: var(--nav-dropdown-background-color);
         border: 1px solid color-mix(in srgb, var(--nav-color), transparent 90%);
         box-shadow: none;
-        transition: all 0.5s ease-in-out;
+        transition: all 0.3s ease-in-out;
     }
 
-    .nav .dropdown:hover>ul {
+    .nav .dropdown>.dropdown-active {
         display: block;
+    }
+
+    .dropdown .navactive {
+        color: var(--nav-hover-color);
+    }
+
+    .dropdown .navactive i {
+        color: var(--nav-hover-color);
+        transform: rotate(180deg);
     }
 
     .mobile-nav-active {
@@ -850,7 +851,13 @@ a:hover {
 @media screen and (max-width: 768px) {
     .footer-top {
         flex-direction: column;
-        margin: auto;
+        margin: 0;
+        padding: 0;
+    }
+
+    .footer-left{
+        justify-content: space-between;
+        padding: 2%;
     }
 
     .footer-right {
