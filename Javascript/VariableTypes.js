@@ -18,5 +18,14 @@ console.log(let_name);
 const pi = 3.14;
 console.log(pi)
 
-pi = 22; // can not reassign, will give syntax-error
-console.log(pi);
+// pi = 22; // can not reassign, will give syntax-error
+// console.log(pi);
+
+
+console.log("\n----Hoisting----");
+host = 5;
+console.log(host); //undefined
+// var host=10;
+
+var host="Ram";
+console.log(host); 
