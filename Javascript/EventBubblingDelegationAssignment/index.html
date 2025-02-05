@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aqua;
+            width: 500px;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div{
+            background-color: lightpink;
+            width: 400px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        span{
+            background-color: rgb(250, 250, 66);
+            width: 300px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="bubbling">Div
+        <span>Span
+            <button>Click Me</button>
+        </span>
+    </div>
+
+    <div id="delegation">
+        <button id="button1">Button 1</button>
+        <button id="button2">Button 2</button>
+        <button id="button3">Button 3</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
