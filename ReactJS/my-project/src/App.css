@@ -1,0 +1,13 @@
+body{
+  padding: 10px;
+}
+
+ul{
+  display: flex;
+  gap: 20px;
+}
+
+li{
+  background-color: aquamarine;
+  list-style: none;
+}

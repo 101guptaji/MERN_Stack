@@ -1,0 +1,33 @@
+#navbar{
+    background-color: rgb(50, 50, 50);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    overflow: hidden;
+    color: #fff;
+
+    & h1{
+        font-size: 28px;
+    }
+
+    & ul{
+        margin-right: 30px;
+        display: flex;
+        gap: 30px;
+    }
+
+    & a{
+        color: white;
+        font-size: 20px;
+    }
+
+    & a:hover{
+        color: rgb(255, 149, 0);
+    }
+}
+
