@@ -1,0 +1,64 @@
+.weather {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.weatherIcon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    justify-content: center;
+    gap: 10px;
+
+    & div {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        font-size: 3rem;
+        text-transform: capitalize;
+    }
+
+    & img {
+        width: 5rem;
+        margin-bottom: 1rem;
+    }
+
+    & h2 {
+        font-size: 3rem;
+    }
+}
+
+.windDetails {
+    display: flex;
+    padding: 0 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    justify-content: space-between;
+}
+
+.windDetails .humidityBox {
+    display: flex;
+    font-size: 1rem;
+    color: #323232;
+}
+
+.windDetails .humidity .humidityValue {
+    text-align: center;
+    font-size: 2rem;
+    color: #323232;
+}
+
+.windDetails .humidityBox img,
+.windDetails .windSpeed img {
+    max-height: 3rem;
+    margin-right: 0.5rem;
+}
+
+.windDetails .windSpeed {
+    display: flex;
+    font-size: 1rem;
+    color: #323232;
+}
