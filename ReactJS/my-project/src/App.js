@@ -1,9 +1,14 @@
-import { useEffect, useState } from 'react';
+import {createContext, useState } from 'react';
 import './App.css';
 import Navbar from './Components/Navbar';
 import Component1 from './Components/Component1';
-import HomePage from './Components/HomePage';
-import LogInPage from './Components/LogInPage';
+import UseReducerExample from './Components/UseReducerExample';
+import ConditionalRendering from './Components/ConditionalRendering';
+import UseEffectExample from './Components/UseEffectExample';
+import { UseContext1 } from './Components/UseContext1';
+
+// exporting this context
+export const myContext = createContext();
 
 function App() {
   let heading1 = "My Heading";
@@ -32,14 +37,6 @@ function App() {
     setCount(count + 1);
   }
 
-  const [isLogedIn, setLogedIn] = useState(false);
-
-  // useEffect Example
-  const [renderCount, setRenderCount] = useState(0);
-  useEffect(()=>{
-    setRenderCount(renderCount+1)
-  }, [count]);
-
   return (
     <>
       <Navbar />
@@ -58,16 +55,21 @@ function App() {
       </button>
 
       {/* Mapping Example */}
-      <Component1 />
+      {/* <Component1 /> */}
 
       {/* Conditional Rendering */}
-      {
-        isLogedIn ? <HomePage />
-          : <LogInPage isLogedIn={isLogedIn} setLogedIn={setLogedIn} />
-      }
+      {/* <ConditionalRendering /> */}
 
       {/* useEffect Example */}
-      <h3>Render Count: {renderCount}</h3>
+      {/* <UseEffectExample count={count}/> */}
+
+      {/* UseReducer Example */}
+      {/* <UseReducerExample /> */}
+
+      {/* Context API Example*/}
+      <myContext.Provider value={"This is a context data from App.js"} >
+        <UseContext1 />
+      </myContext.Provider>
     </>
   );
 }
