@@ -7,4 +7,5 @@
 <img src="./ClientPage.png" alt="HomePage" />
 <img src="./ContactPage.png" alt="HomePage" />
 <img src="./ServicePage.png" alt="ServicePage" />
-<img src="./Footer.png" alt="Footer" />
+<img src="./FooterPage.png" alt="FooterPage" />
+
