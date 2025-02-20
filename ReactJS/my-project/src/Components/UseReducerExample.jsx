@@ -4,11 +4,11 @@ const reducer = (state, action) => {
     switch (action.type) {
         case 'increament':
             // always return a new object
-            return {count: state.count+1, toggle: state.toggle, data: state.data};
+            return { ...state, count: state.count+1};
         case 'decreament':
-            return {count: state.count-1, toggle: state.toggle, data: state.data};
+            return {...state, count: state.count-1};
         case 'Toggle':
-            return {count: state.count, toggle: !state.toggle, data: state.data}; 
+            return {...state, toggle: !state.toggle}; 
         default:
             throw Error('Unknown action.');
     }

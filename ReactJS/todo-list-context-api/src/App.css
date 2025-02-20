@@ -1,0 +1,79 @@
+.container {
+  position: relative;
+  background-color: lightskyblue;
+  padding: 1rem 5rem;
+  /* width: 100%; */
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.row {
+  margin: 0.5rem 0;
+  font-size: 1.25rem;
+
+  & input {
+    width: 100%;
+    font-size: 1rem;
+    padding: 5px;
+  }
+
+  & input:focus {
+    outline: 2px solid blue;
+    border: 2px solid skyblue;
+  }
+}
+
+input[type=submit] {
+  font-size: 1rem;
+  background-color: green;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  margin-bottom: 10px;
+}
+
+.content {
+  margin: 0.25rem 0;
+  font-size: 1.25rem;
+
+  & input {
+    width: 100%;
+    font-size: 1rem;
+    padding: 5px;
+    border: none;
+    outline: none;
+  }
+
+  & input:read-only {
+    background-color: rgba(230, 230, 230, 0.433);
+  }
+}
+
+.actions .btn {
+  font-size: 1rem;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  margin-right: 5px;
+}
+
+.edit {
+  background-color: rgba(255, 200, 0, 0.996);
+  color: red;
+}
+
+.remove {
+  background-color: red;
+  color: white;
+}
+
+.remove:disabled{
+  background-color: grey;
+}

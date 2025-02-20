@@ -1,0 +1,8 @@
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+.active{
+    color: red;
+}

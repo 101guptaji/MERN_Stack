@@ -1,11 +1,12 @@
-import {createContext, useState } from 'react';
+import { createContext, useState } from 'react';
 import './App.css';
 import Navbar from './Components/Navbar';
 import Component1 from './Components/Component1';
 import UseReducerExample from './Components/UseReducerExample';
 import ConditionalRendering from './Components/ConditionalRendering';
 import UseEffectExample from './Components/UseEffectExample';
-import { UseContext1 } from './Components/UseContext1';
+import UseContext1 from './Components/UseContext1';
+import UseRef_StateTrack from './Components/UseRef_StateTrack';
 
 // exporting this context
 export const myContext = createContext();
@@ -67,9 +68,14 @@ function App() {
       {/* <UseReducerExample /> */}
 
       {/* Context API Example*/}
-      <myContext.Provider value={"This is a context data from App.js"} >
+      {/* <myContext.Provider value={"This is a context data from App.js"} >
         <UseContext1 />
-      </myContext.Provider>
+      </myContext.Provider> */}
+
+      {/* useRef Example */}
+      {/* <UseRef_StateTrack /> */}
+
+        
     </>
   );
 }
