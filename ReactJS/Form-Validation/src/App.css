@@ -1,0 +1,26 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.regForm{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+
+  & input{
+    padding: 5px;
+  }
+
+  & span{
+    font-size: 10px;
+    color: red;
+  }
+}
+
+.btn{
+  background-color: rgb(11, 11, 244);
+}
