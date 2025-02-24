@@ -72,25 +72,28 @@ const Form = () => {
                     value={user.name}
                     onChange={handleChange}
                     placeholder='Enter your name' />
-                {errors && <span>{errors.name}</span>}
+                {errors.name && <span>{errors.name}</span>}
+
                 <input type='email'
                     name='email'
                     value={user.email}
                     onChange={handleChange}
                     placeholder='Enter your email id' />
-                {errors && <span>{errors.email}</span>}
+                {errors.email && <span>{errors.email}</span>}
+
                 <input type='password'
                     name='password'
                     value={user.password}
                     onChange={handleChange}
                     placeholder='Enter a strong password' />
-                {errors && <span> {errors.password}</span>}
+                {errors.password && <span> {errors.password}</span>}
+
                 <input type='password'
                     name='confirmpassword'
                     value={user.confirmpassword}
                     onChange={handleChange}
                     placeholder='Enter the password again' />
-                {errors && <span>{errors.confirmpassword}</span>}
+                {errors.confirmpassword && <span>{errors.confirmpassword}</span>}
                 
                 <button type='submit' className='btn'>Submit</button>
             </form>

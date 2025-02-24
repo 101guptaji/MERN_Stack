@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+}
+
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.backBtn{
+    border: 1px solid black;
+    background-color: lightgray;
+    color: blue;
+    padding: 5px;
+    text-decoration: none;
+    max-height: 8vh;
+    
+}
+
+.search-box{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+    padding: 0 3rem;
+    background-color: brown;
+
+    & input{
+        padding: 10px;
+        width: 50%;
+        border-radius: 20px;
+        border: none;
+        outline: 1px solid red;
+    }
+}
+
+.products-container{
+    position: relative;
+    margin: 10vh 0;
+}
+
+.product-card{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 2vh;
+    margin-bottom: 2vh;
+    gap: 2vw;
+}
+
+.product-img{
+    width: 7vw;
+
+    & img{
+        width: 100%;
+    }
+}
+
+.cart-summary{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    background-color: brown;
+    color: white;
+    width: 100%;
+    height: 10vh;
+    padding: 0 3rem;
+}
+
+.profile-page{
+    margin: 10vh 0;
+}
+
+.profile-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+
+    & label{
+        display: flex;
+        gap: 10px;
+    }
+
+    & input{
+        margin-right: 0;
+    }
+}
+
+.profile-form .actions{
+    display: flex;
+    gap: 10px;
+}
