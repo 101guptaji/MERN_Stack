@@ -1,6 +1,6 @@
-## "Smart Shopping Cart" Application
+# "Smart Shopping Cart" Application
 
-# Objective: Build an interactive E-commerce Shopping Cart App that uses React hooks, Context API, routing, Redux for state management, and conditional rendering.
+### Objective: Build an interactive E-commerce Shopping Cart App that uses React hooks, Context API, routing, Redux for state management, and conditional rendering.
 
 # App Requirements:
  
@@ -57,11 +57,11 @@
         On the Checkout Confirmation page, show a "Continue Shopping" button after checkout.
 
 # Final Screenshots
-Home Page <img src="./Screenshots/HomePage.png" />
-Cart Summary Home <img src="./Screenshots/CartSummary HomePage.png" />
-Cart Page <img src="./Screenshots/CartPage.png" />
-Quantity on Cart page <img src="./Screenshots/CartPage2.png" />
-Checkout Page <img src="./Screenshots/CheckoutPage.png" />
-Product Details Page: <img src="./Screenshots/ProductDetails.png" />
-Profile Page: <img src="./Screenshots/ProfilePage.png" />
-Profile Update: <img src="./Screenshots/UpdatedProfile.png" />
+Home Page <img src="./Screenshots/HomePage.png" /> <br/>
+Cart Summary Home <img src="./Screenshots/CartSummary HomePage.png" /><br/>
+Cart Page <img src="./Screenshots/CartPage.png" /><br/>
+Quantity on Cart page <img src="./Screenshots/CartPage2.png" /><br/>
+Checkout Page <img src="./Screenshots/CheckoutPage.png" /><br/>
+Product Details Page: <img src="./Screenshots/ProductDetails.png" /><br/>
+Profile Page: <img src="./Screenshots/ProfilePage.png" /><br/>
+Profile Update: <img src="./Screenshots/UpdatedProfile.png" /><br/>
