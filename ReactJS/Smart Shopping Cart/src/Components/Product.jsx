@@ -6,6 +6,7 @@ import CartSummary from './CartSummary';
 
 const ProductDetails = ({ products }) => {
   const { id } = useParams();
+  
   const product = products.find(p => p.id === parseInt(id));
 
   return (

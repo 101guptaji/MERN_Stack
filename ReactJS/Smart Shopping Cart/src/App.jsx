@@ -5,7 +5,7 @@ import Product from './Components/Product';
 import Cart from './Components/Cart';
 import Checkout from './Components/Checkout';
 
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setProducts } from './Redux/Slices/productsSlice';
 import Profile from './Components/Profile';
