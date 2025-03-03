@@ -1,0 +1,43 @@
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 300px;
+    padding: 0 100px;
+}
+
+.links{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+.link{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.social{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+    & svg{
+        font-size: 30px;
+        cursor: pointer;
+    }
+}
+
+@media(max-width:1000px){
+    footer{
+        flex-direction: column;
+        padding: 50px 30px;
+        height: auto;
+        justify-content: center;
+        gap: 40px;
+    }
+}

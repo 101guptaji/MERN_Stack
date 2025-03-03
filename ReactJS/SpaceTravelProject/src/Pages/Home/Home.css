@@ -1,0 +1,255 @@
+/* ********* Hero Section *************** */
+.hero video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.hero .content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    height: 100vh;
+
+    & h1{
+        font-size: 7vw;
+        color: aqua;
+    }
+
+    & p{
+        font-size: 3vw;
+        color: aliceblue;
+    }
+}
+
+.hero .content .buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    /* for Link tag as Link get converted into anchor tag */
+    & a{ 
+        padding: 10px 20px;
+        background-color: transparent;
+        border: 1px solid white;
+    }
+
+    & a:hover{
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+}
+
+
+/* ********* About Section *************** */
+
+.about-container{
+    margin-top: 7vh;
+}
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 7vw;
+    padding: 7dvh 7dvw;
+
+    & img{
+        /* width: 50%; */
+        height: 65vh;
+    }
+}
+
+.about .content{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2vh;
+
+    & h2{
+        font-size: 7dvh;
+    }
+
+    & p{
+        font-size: 3dvh;
+        line-height: 6dvh;
+    }
+}
+
+@media(max-width:1000px){
+    .about{
+        display: flex;
+        flex-direction: column;
+    
+        & img{
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+
+/* ********* call-to-action Section *************** */
+
+.call-to-action{
+    width: 100%;
+    height: 90vh;
+    background-color: #080808;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7dvh;
+
+    & h2{
+        text-align: center;
+        font-size: 7dvh;
+    }
+
+    & a{ 
+        font-size: 4dvh;
+        padding: 1dvw 3dvw;
+        background-color: transparent;
+        border: 1px solid white;
+    }
+
+    & a:hover{
+        background-color: rgba(0, 145, 0, 0.7);
+    }
+}
+
+@media(max-width: 768px){
+    .call-to-action{
+        height: 50vh;
+        gap: 5dvh;
+        padding: 0 2dvh;
+    
+        & h2{
+            font-size: 5dvh;
+        }
+
+        & a{
+            font-size: 3dvh;
+        }
+    }
+}
+
+/* ********* Modal Section *************** */
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.overlay .modal{
+    position: relative;
+    width: 600px;
+    height: 400px;
+    background-color: #080808;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.overlay .modal .cross{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+@media(max-width: 768px){
+    .overlay .modal{
+        width: 400px;
+        height: 250px;
+        padding: 20px;
+
+        & h2{
+            font-size: 20px;
+        }
+    }
+}
+
+@media(max-width: 425px){
+    .overlay .modal{
+        width: 250px;
+        height: 150px;
+        padding: 10px;
+
+        & h2{
+            font-size: 14px;
+        }
+    }
+}
+
+/* ********* FAQs Section *************** */
+
+.faq{
+    width: 100%;
+    padding: 5dvh;
+}
+
+.faq .items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    padding: 0 7dvw;
+}
+
+.faq .items .wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #1e1b1b;
+    padding: 10px 20px;
+}
+
+.faq .items .question{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    & svg{
+        font-size: 20px;
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0,1,0,1);
+    }
+}
+
+.items .answers{
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0,1,0,1);
+}
+
+.items .answers.show {
+    height: auto;
+    max-height: 99999px;
+    transition: all 0.3s cubic-bezier(1,0,1,0);
+}
+
+.reverse{
+    transform: rotate(180deg);
+    transition: all 0.5s cubic-bezier(1,0,1,0);
+}
