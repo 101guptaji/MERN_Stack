@@ -1,0 +1,19 @@
+{
+  "name": "httpgetpost_exercise",
+  "version": "1.0.0",
+  "description": "A Node.js HTTP server that responds to GET and POST requests.",
+  "keywords": [
+    "HTTP",
+    "GET",
+    "POST",
+    "Node.js"
+  ],
+  "license": "ISC",
+  "author": "HimanshuGupta",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  }
+}

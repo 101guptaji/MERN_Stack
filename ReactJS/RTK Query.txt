@@ -1,0 +1,131 @@
+RTK Query is a powerful data fetching and caching tool. It is designed to simplify common cases for loading data in a web application, eliminating the need to hand-write data fetching & caching logic yourself.
+
+RTK Query is an optional addon included in the Redux Toolkit package
+
+RTK Query includes these APIs:
+createApi(): The core of RTK Query's functionality. It allows you to define a set of "endpoints" that describe how to retrieve data from backend APIs and other async sources, including the configuration of how to fetch and transform that data. In most cases, you should use this once per app, with "one API slice per base URL" as a rule of thumb.
+fetchBaseQuery(): A small wrapper around fetch that aims to simplify requests. Intended as the recommended baseQuery to be used in createApi for the majority of users.
+<ApiProvider />: Can be used as a Provider if you do not already have a Redux store.
+setupListeners(): A utility used to enable refetchOnMount and refetchOnReconnect behaviors.
+
+Steps to create RTK Query:
+1. Create an API Slice:
+
+	import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
+
+	// Define a service using a base URL and expected endpoints
+	export const usersApi = createApi({
+		reducerPath: 'users',
+		baseQuery: fetchBaseQuery({
+			baseUrl: 'https://jsonplaceholder.typicode.com/',
+		}),
+		endpoints: (builder) => ({
+			getUsers: builder.query({
+				query: () => ({
+					url: "users",
+					method: "GET"
+				}),
+			}),
+
+			postUser: builder.mutation({
+				query: (data) => ({
+					url: "users",
+					method: "POST",
+					body: data,
+				}),
+			}),
+		}),
+	})
+
+	// Export hooks for usage in functional components, which are
+	// auto-generated based on the defined endpoints
+	export const { useGetUsersQuery, usePostUserMutation } = usersApi
+	
+2. Configure the Store:
+	
+	import { configureStore } from '@reduxjs/toolkit';
+	import { usersApi } from '../Slices/API/usersApiSlice';
+
+	export const myStore = configureStore({
+		reducer: {
+			[usersApi.reducerPath]: usersApi.reducer, // Add the generated reducer as a specific top-level slice
+		},
+
+		// Adding the api middleware enables caching, invalidation, polling,
+		// and other useful features of `rtk-query`.
+		middleware: (getDefaultMiddleware) =>
+			getDefaultMiddleware().concat(usersApi.middleware),
+	});
+
+3. Use Hooks in Components:
+	Finally, import the auto-generated React hooks from the API slice into your component file, and call the hooks in your component with any needed parameters. RTK Query will automatically fetch data on mount, re-fetch when parameters change, provide {data, isFetching} values in the result, and re-render the component as those values change:
+	
+	import React from 'react'
+
+	import { useGetUsersQuery, usePostUserMutation } from '../Redux/Slices/API/usersApiSlice';
+
+	const Users = () => {
+		// Using a query hook automatically fetches data and returns query values
+		const { data:users } = useGetUsersQuery()
+		console.log(users);
+
+		const newUser = {
+			"id": 101,
+			"name": "John wick",
+			"username": "JohnW",
+			"email": "Johnw@april.biz",
+			"address": "",
+			"phone": "8596748596",
+			"website": "hildegard.org",
+			"company": {
+				"name": "Romaguera-Crona",
+				"catchPhrase": "Multi-layered client-server neural-net",
+				"bs": "harness real-time e-markets"
+			}
+		}
+
+		const [postUser] = usePostUserMutation();
+
+		const addUser = async () => {
+			try {
+				const response = postUser(newUser);
+				console.log(response);
+			}
+			catch (error) {
+				console.log(error);
+			}
+		}
+
+		return (
+			<div>
+				<h1>Users List</h1>
+				<table>
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th>NAME</th>
+							<th>EMAIL</th>
+							<th>PHONE</th>
+						</tr>
+					</thead>
+					<tbody>
+						{
+							users && users.map((user, index) => {
+								return (
+									<tr key={index}>
+										<td>{user.id}</td>
+										<td>{user.name}</td>
+										<td>{user.email}</td>
+										<td>{user.phone}</td>
+									</tr>
+								)
+							})
+						}
+					</tbody>
+				</table>
+				<button onClick={addUser}>Add User</button>
+			</div>
+		)
+	}
+
+	export default Users
