@@ -1,0 +1,24 @@
+{
+  "name": "expressroutesexercise",
+  "version": "1.0.0",
+  "description": "Create an Express.js application that sends responses for GET, POST, PUT, and DELETE requests.",
+  "keywords": [
+    "express.js",
+    "routes",
+    "REST",
+    "API",
+    "Response",
+    "methods"
+  ],
+  "license": "ISC",
+  "author": "HimanshuGupta",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

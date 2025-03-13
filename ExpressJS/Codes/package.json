@@ -1,0 +1,22 @@
+{
+  "name": "codes",
+  "version": "1.0.0",
+  "description": "All express tutorial codes",
+  "keywords": [
+    "Express.js",
+    "Middleware",
+    "Routing",
+    "Servers"
+  ],
+  "license": "ISC",
+  "author": "HimanshuGupta",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2"
+  }
+}
