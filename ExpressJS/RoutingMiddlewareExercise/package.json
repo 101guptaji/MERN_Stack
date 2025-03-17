@@ -1,0 +1,21 @@
+{
+  "name": "routingmiddlewareexercise",
+  "version": "1.0.0",
+  "description": "An Express.js application that uses routing and middleware.",
+  "keywords": [
+    "express",
+    "routing",
+    "middleware"
+  ],
+  "license": "ISC",
+  "author": "HimanshuGupta",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
